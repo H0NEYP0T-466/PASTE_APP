@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      GETTING STARTED
+      GETTING STARTED !!
     </div>
   )
 }
