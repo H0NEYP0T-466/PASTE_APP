@@ -1,46 +1,41 @@
-import { useState } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Nav_Bar from './components/Nav_Bar'
-import Home from './components/Home'
-import Paste from './components/Paste'
-import Veiw_paste from './components/Veiw_paste'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./components/Home"
+import Paste from "./components/Paste"
+import ViewPaste from "./components/ViewPaste"
+import Navbar from "./components/Navbar"
+
 
 const router = createBrowserRouter(
   [
     {
-      path: '/',
+      path:"/",
       element:
-      <div>
-        <Nav_Bar/>
+      <div className="w-full h-full flex flex-col">
+        <Navbar/>
         <Home/>
       </div>
     },
     {
-      path: '/paste',
-      element:
-      <div>
-         <Nav_Bar/>
-        <Paste/>
-      </div>
+      path:"/pastes",
+      element: <div className="w-full h-full flex flex-col">
+      <Navbar/>
+      <Paste/>
+    </div>
     },
     {
-      path: '/paste/:id',
-      element:
-      <div>
-        <Nav_Bar/>
-        <Veiw_paste/>
-      </div>
-    },
+      path:"/pastes/:id",
+      element: <div className="w-full h-full flex flex-col">
+      <Navbar/>
+      <ViewPaste/>
+    </div>,
+    }
   ]
-);
+)
 
-
-function App() {  
+function App() {
 
   return (
-    <div>
-      <RouterProvider router={router}/>    
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 
