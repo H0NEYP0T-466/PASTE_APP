@@ -1,16 +1,45 @@
 import { useState } from 'react'
-import './App.css'
-import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Nav_Bar from './components/Nav_Bar'
+import Home from './components/Home'
+import Paste from './components/Paste'
+import Veiw_paste from './components/Veiw_paste'
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element:
+      <div>
+        <Nav_Bar/>
+        <Home/>
+      </div>
+    },
+    {
+      path: '/paste',
+      element:
+      <div>
+         <Nav_Bar/>
+        <Paste/>
+      </div>
+    },
+    {
+      path: '/paste/:id',
+      element:
+      <div>
+        <Nav_Bar/>
+        <Veiw_paste/>
+      </div>
+    },
+  ]
+);
+
 
 function App() {  
-  const [count, setCount] = useState(0)
 
   return (
     <div>
-<div className="bg-blue-500 text-white p-4">
-  GETTING STARTED !!
-</div>
-    
+      <RouterProvider router={router}/>    
     </div>
   )
 }
