@@ -28,14 +28,8 @@ Users can:
 
 ---
 
-## 📸 Screenshots
 
-<!-- Replace with your actual screenshots -->
-| Create Paste | View Pastes |
-|--------------|-------------|
-| ![Create](./screenshots/create.png) | ![View](./screenshots/view.png) |
 
----
 
 ## 📂 Folder Structure
 
