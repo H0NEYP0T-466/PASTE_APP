@@ -273,7 +273,7 @@ copies or substantial portions of the Software.
 
 <div align="center">
 
-**Made with ❤️ by the open source community**
+**Made with ❤️ by H0NEYP0T-466**
 
 ⭐ **Star this repo** if you find it helpful!
 
